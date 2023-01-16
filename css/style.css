@@ -1,0 +1,367 @@
+/* Reset para navegadores */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}  
+
+/* Imagen de fondo + filtro en negro */
+header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.905), rgba(63, 21, 71, 0.23)), url(../assets/backrounddark.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* Posicionamiento del nav con Flexbox*/
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+nav img {
+    width: 150px;
+}
+
+/* Configuración y diseño de los navbar */
+.navbar {
+    flex: 1;
+    text-align: right;
+}
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* subrayado y animación básica del navbar */
+.navbar ul li::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: #31a7c2;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width:100% ;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/*  Botón - Call to action  */
+.cta-home{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+/* Animación del botón */
+.cta-home:hover{
+    border: 1px solid #31a7c2;
+    background: #31a7c2;
+    transition: 1s;
+}
+
+nav .fa {
+    display: none;
+}
+
+/* Responsive - CSS media queries */
+@media(max-width: 480px){
+    .text-box h1{
+        font-size: 20px;
+    }
+
+    .text-box p{
+        font-size: 12px;
+    }
+
+    .contenedor{
+        padding-bottom: 50px;
+    }
+
+    .navbar ul li {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        background: #31a7c2;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa {
+        display: block;
+        color: rgb(250, 250, 250);
+        margin: 10px;
+        font-size: 26px;
+        cursor: pointer;
+    }
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    text-align: center;
+    padding:30px 0;
+}
+footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.redes-sociales{
+    width: 100%;
+    text-align: center;
+    color: #31A7C2;
+}
+.redes-sociales{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* SUB - HEADER */
+.sub-header{
+    height: 40vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.905), rgba(63, 21, 71, 0.23)), url(../assets/backrounddark.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #ffffff;
+}
+.sub-header h1{
+    margin-top: 60px;
+    font-size: 35px;
+}
+
+/* TARJETAS DE SERVICIOS */
+.servicios {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p { 
+    color: #777;
+    font-size: 14px;
+    font-weight: 300px;
+    line-height: 22px;
+    padding: 10px;
+}
+.servicios-filas {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.servicios-columnas {
+    flex-basis: 31%;
+    background: #d2e6f4;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+
+    /* Animación de sombreado para este div */
+    transition: 0.5s;
+}
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+/* Responsive tarjeta de servicios */
+
+@media(max-width: 700px){
+    .servicios-filas{
+        flex-direction: column;
+    }
+}
+
+/* Animación de sombreado para este div */
+.servicios-columnas:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Nosotros */
+.Nosotros {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.Nosotros-estilo {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.Nosotros-estilo img{
+    width: 100%;
+}
+.Nosotros-estilo h1 {
+    padding-top: 0;
+}
+.Nosotros-estilo p {
+    padding: 15px 0 25px;
+}
+
+/* Estilo del CTA en NOSOTROS */
+.botonazul {
+    border: 2px solid #31A7C2;
+    background: transparent;
+    color: #31A7C2;
+}
+.botonazul:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* Formulario de contacto */
+.container {
+    box-sizing: border-box;
+}
+input[type=text],select,textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=submit] {
+    background-color: #31A7C2;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #23bd56;
+    transition: 0.8s;
+}
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 28px;
+    margin-top: 50px;
+}
+.container {
+    text-align: left;
+}
+
+.contenedor {
+    width: 100%;
+    min-height: 100vh;
+    background: #2b5876;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.contenedor h2 {
+    color: #fff;
+    font-size: 32px;
+    padding: 50px 0;
+    text-align: center;
+}
+.precios-filas {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 25px;
+}
+.precios-columnas {
+    background: #1f283b;
+    padding: 10% 15%;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+}
+.precios-columnas p{
+    font-size: 22px;
+    color:rgb(250, 250, 250);
+}
+.precios-columnas h3{
+    font-size: 44px;
+    margin: 20px 0 40px;
+    font-weight: 500;
+}
+.precios-columnas h3 span{
+    font-size: 16px;
+}
+.precios-columnas ul{
+    text-align: left;
+    margin: 20px 0;
+    color: #ddd;
+    list-style: none;
+}
+.precios-columnas ul li{
+    margin: 15px 0;
+}
+.precios-columnas ul li::before{
+    content: '\2022';
+    color: #e33058;
+    font-weight: bold;
+    margin-right: 8px;
+}
+.precios-columnas button{
+    width: 100%;
+    padding: 14px 0;
+    background: transparent;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #e33058;
+    border-radius: 6px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+.precios-columnas button:hover{
+    background: #e33058;
+}

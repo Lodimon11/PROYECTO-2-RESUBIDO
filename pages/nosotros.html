@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facundolodico-desarrolloweb</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- LINK FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/d0cfe6c727.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="../index.html"><img src="../assets/logofluxerblanco.svg" alt="logo"></a>
+            <div class="navbar" id="navLinks">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="../pages/servicios.html">SERVICIOS</a></li>
+                    <li><a href="../pages/galeria.html">GALERIA</a></li>
+                    <li><a href="#">NOSOTROS</a></li>
+                    <li><a href="../pages/contacto.html">CONTACTO</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showmenu()"></i>
+        </nav>
+        <h1>Nosotros</h1>
+    </section>
+
+    <!-- Seccion nosotros -->
+    <section class="Nosotros">
+
+        <!-- Decidí reutilizar la clase -->
+        <div class="servicios-filas">
+            <div class="Nosotros-estilo">
+                <h1>¡Conoce al equipo detrás de Fluxer Agencia!</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quisquam exercitationem perferendis
+                    provident ullam sint? Odio suscipit, quo corporis ratione nemo numquam ut sed est earum delectus in
+                    excepturi tenetur.</p>
+                <a href="../pages/contacto.html" class="cta-home botonazul">Quiero saber más</a>
+            </div>
+            <div class="Nosotros-estilo">
+                <img src="../assets/team.webp" alt="Equipo de Fluxer">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h4>Redes Sociales</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. officiis placeat consequatur laborum libero
+            fugit<br> nemo similique voluptatibus ea exercitationem adipisci atque fuga nisi, velit, facere voluptatem
+            inventore eum distinctio.</p>
+        <div class="redes-sociales">
+            <iconify-icon icon="carbon:logo-facebook" style="color: #31a7c2;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="carbon:logo-instagram" style="color: #31a7c2;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="carbon:logo-twitter" style="color: #31a7c2;" width="30" height="30"></iconify-icon>
+            <iconify-icon icon="carbon:logo-linkedin" style="color: #31a7c2;" width="30" height="30"></iconify-icon>
+        </div>
+        <p><b>TP-Desarrollo Web</b></p>
+    </footer>
+
+<!-- Menu desplegable con JavaScript -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showmenu(){
+        navLinks.style.right = "0"
+    }
+    function hidemenu(){
+        navLinks.style.right = "-200px"
+    }
+</script>
+</body>
+
+</html>
